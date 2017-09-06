@@ -1,0 +1,24 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+  }
+
+  .row {
+    border: 1px solid #999;
+    padding: 10px;
+  }
+
+  .input-line {
+    width: 300px;
+    background-color: transparent;
+    color: #1D1D1D;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #424242 1px;
+    padding: 10px;
+    font: 14px "Century Gothic", Futura, sans-serif;
+}
+  
