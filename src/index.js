@@ -39,6 +39,13 @@ class Phonebook extends React.Component {
         }.bind(this));
     }
 
+    sortByName() {
+        let contacts = this.state.contacts;
+        this.setState({contacts: contacts.sort(function(a, b) {
+            return a.name.localeCompare(b.name);
+        })});
+    }
+
     render() {
         let filteredContacts = this.state.contacts.filter(
             (contact) => {
@@ -52,6 +59,8 @@ class Phonebook extends React.Component {
                     placeholder="Enter search term..." 
                     value={this.state.search}
                     onChange={this.updateSearch.bind(this)} />
+                <button onClick={this.sortByName.bind(this)}>Sort by name</button>
+                
                 <p/>
                 {filteredContacts.map(contact =>
                  <Contact key={contact.name} name={contact.name} phone_number={contact.phone_number} address={contact.address}></Contact>)}
